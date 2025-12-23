@@ -148,11 +148,16 @@
                                     </div>
                                     <div class="info-label">Fecha de Emisión:</div>
                                     <div class="info-value">
-                                        <t t-esc="o.invoice_date.strftime('%d/%m/%Y')" t-if="o.invoice_date"/>
+                                        <t t-if="o.invoice_date">
+                                            <t t-esc="o.invoice_date.strftime('%d/%m/%Y')"/>
+                                        </t>
+                                        <span t-else="">-</span>
                                     </div>
                                     <div class="info-label">Fecha de Vencimiento:</div>
                                     <div class="info-value">
-                                        <t t-esc="o.invoice_date_due.strftime('%d/%m/%Y')" t-if="o.invoice_date_due"/>
+                                        <t t-if="o.invoice_date_due">
+                                            <t t-esc="o.invoice_date_due.strftime('%d/%m/%Y')"/>
+                                        </t>
                                         <span t-else="">Sin fecha de vencimiento</span>
                                     </div>
                                     <div class="info-label">Estado:</div>
