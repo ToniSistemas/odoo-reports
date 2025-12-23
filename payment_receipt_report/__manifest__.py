@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Payment Receipt Report',
+    'version': '18.0.1.0.0',
+    'category': 'Accounting',
+    'summary': 'Generate payment receipt PDF from invoices',
+    'description': """
+        This module allows you to generate a payment receipt in PDF format 
+        from an invoice, even before it is paid.
+        
+        Features:
+        - Payment receipt generation from invoice
+        - Professional PDF format
+        - Company logo display
+        - Customer and invoice information
+        - Can be generated regardless of payment status
+    """,
+    'author': 'ToniSistemas',
+    'website': 'https://github.com/ToniSistemas/odoo-reports',
+    'depends': ['account'],
+    'data': [
+        'security/ir.model.access.csv',
+        'report/payment_receipt_report.xml',
+        'report/payment_receipt_template.xml',
+        'views/account_move_views.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+    'license': 'LGPL-3',
+}
