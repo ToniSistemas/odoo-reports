@@ -20,8 +20,8 @@
     'depends': ['account'],
     'data': [
         'security/ir.model.access.csv',
-        'report/payment_receipt_report.xml',
-        'report/payment_receipt_template.xml',
+        'report/comprobante_pago_report.xml',
+        'report/comprobante_pago_template.xml',
         'views/account_move_views.xml',
     ],
     'installable': True,

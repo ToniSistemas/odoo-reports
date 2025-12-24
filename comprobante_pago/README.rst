@@ -17,7 +17,7 @@ This module allows you to generate a payment receipt in PDF format from invoices
 
 **Installation**
 
-1. Copy the ``payment_receipt_report`` folder to your Odoo addons directory
+1. Copy the ``comprobante_pago`` folder to your Odoo addons directory
 2. Update the addons list in Odoo: Go to Apps → Update Apps List
 3. Search for "Comprobante de Pago" in the Apps menu
 4. Click Install
@@ -35,7 +35,7 @@ No configuration is required. The module works out of the box.
 
 **Technical Information**
 
-:Module: payment_receipt_report
+:Module: comprobante_pago
 :Version: 18.0.1.0.0
 :Category: Accounting
 :Dependencies: account
@@ -45,14 +45,14 @@ No configuration is required. The module works out of the box.
 
 ::
 
-    payment_receipt_report/
+    comprobante_pago/
     ├── __init__.py
     ├── __manifest__.py
     ├── models/
     │   ├── __init__.py
     │   └── account_move.py          # Extends account.move with print action
     ├── report/
-    │   ├── payment_receipt_report.xml    # Report definition
+    │   ├── comprobante_pago_report.xml    # Report definition
     │   └── payment_receipt_template.xml  # QWeb template for PDF
     ├── security/
     │   └── ir.model.access.csv      # Access rights

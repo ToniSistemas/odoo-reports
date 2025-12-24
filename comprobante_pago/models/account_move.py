@@ -12,4 +12,4 @@ class AccountMove(models.Model):
         Can be called from any invoice regardless of payment status.
         """
         self.ensure_one()
-        return self.env.ref('payment_receipt_report.action_report_payment_receipt').report_action(self)
+        return self.env.ref('comprobante_pago.action_report_payment_receipt').report_action(self)

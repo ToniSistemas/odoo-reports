@@ -47,7 +47,7 @@ Este módulo permite generar comprobantes de pago en formato PDF desde las factu
 ### Método 2: Usando Odoo CLI
 
 ```bash
-./odoo-bin -c /etc/odoo/odoo.conf -d your_database -i payment_receipt_report --stop-after-init
+./odoo-bin -c /etc/odoo/odoo.conf -d your_database -i comprobante_pago --stop-after-init
 ```
 
 ## Uso
@@ -90,7 +90,7 @@ Para personalizar el diseño del comprobante:
 3. Ajuste la estructura HTML según sus necesidades
 4. Actualice el módulo en Odoo:
    ```bash
-   ./odoo-bin -c /etc/odoo/odoo.conf -d your_database -u payment_receipt_report
+   ./odoo-bin -c /etc/odoo/odoo.conf -d your_database -u comprobante_pago
    ```
 
 ### Cambiar el Nombre del Archivo PDF

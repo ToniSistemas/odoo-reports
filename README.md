@@ -25,10 +25,10 @@ Módulo que permite generar comprobantes de pago en formato PDF desde facturas d
 
 ```bash
 # Copiar el módulo al directorio de addons
-cp -r payment_receipt_report /ruta/a/odoo/addons/
+cp -r comprobante_pago /ruta/a/odoo/addons/
 
 # Instalar mediante CLI
-./odoo-bin -c /etc/odoo/odoo.conf -d tu_base_de_datos -i payment_receipt_report
+./odoo-bin -c /etc/odoo/odoo.conf -d tu_base_de_datos -i comprobante_pago
 ```
 
 #### Documentación

@@ -2,11 +2,11 @@
 <odoo>
     <!-- Report Definition -->
     <record id="action_report_payment_receipt" model="ir.actions.report">
-        <field name="name">Payment Receipt</field>
+        <field name="name">Comprobante de Pago</field>
         <field name="model">account.move</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">payment_receipt_report.report_payment_receipt</field>
-        <field name="report_file">payment_receipt_report.report_payment_receipt</field>
+        <field name="report_name">comprobante_pago.report_payment_receipt</field>
+        <field name="report_file">comprobante_pago.report_payment_receipt</field>
         <field name="binding_model_id" ref="account.model_account_move"/>
         <field name="binding_type">report</field>
         <field name="print_report_name">'Comprobante_Pago_%s_%s' % (object.name or 'Factura', object.invoice_date or '')</field>
