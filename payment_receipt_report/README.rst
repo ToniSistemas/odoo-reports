@@ -1,5 +1,5 @@
 ================================
-Payment Receipt Report
+Comprobante de Pago
 ================================
 
 This module allows you to generate a payment receipt in PDF format from invoices in Odoo 18.0, regardless of their payment status.
@@ -19,7 +19,7 @@ This module allows you to generate a payment receipt in PDF format from invoices
 
 1. Copy the ``payment_receipt_report`` folder to your Odoo addons directory
 2. Update the addons list in Odoo: Go to Apps → Update Apps List
-3. Search for "Payment Receipt Report" in the Apps menu
+3. Search for "Comprobante de Pago" in the Apps menu
 4. Click Install
 
 **Configuration**

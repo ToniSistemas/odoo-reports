@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Payment Receipt Report',
+    'name': 'Comprobante de Pago',
     'version': '18.0.1.0.0',
     'category': 'Accounting',
-    'summary': 'Generate payment receipt PDF from invoices',
+    'summary': 'Generar comprobante de pago PDF desde facturas',
     'description': """
         This module allows you to generate a payment receipt in PDF format 
         from an invoice, even before it is paid.

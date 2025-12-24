@@ -1,4 +1,4 @@
-# Payment Receipt Module - Implementation Summary
+# Comprobante de Pago - Resumen de Implementación
 
 ## Overview
 

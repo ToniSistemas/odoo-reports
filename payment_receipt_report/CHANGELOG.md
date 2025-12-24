@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [18.0.1.0.0] - 2025-12-23
 
 ### Added
-- Initial release of Payment Receipt Report module
+- Lanzamiento inicial del módulo Comprobante de Pago
 - PDF generation for payment receipts from invoices
 - Professional QWeb template with company logo support
 - Customer information display (name, address, locality, tax ID)

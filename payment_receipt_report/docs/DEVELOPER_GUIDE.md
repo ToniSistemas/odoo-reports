@@ -1,4 +1,4 @@
-# Developer Guide - Payment Receipt Report
+# Guía de Desarrollador - Comprobante de Pago
 
 ## Overview
 

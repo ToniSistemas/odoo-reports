@@ -4,7 +4,7 @@ Repositorio de módulos de reportes personalizados para Odoo.
 
 ## Módulos Disponibles
 
-### Payment Receipt Report (Comprobante de Pago)
+### Comprobante de Pago
 
 **Versión:** 18.0.1.0.0  
 **Estado:** ✅ Listo para producción

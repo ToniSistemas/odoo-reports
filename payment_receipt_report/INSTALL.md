@@ -1,4 +1,4 @@
-# Payment Receipt Report Module - Installation Guide
+# Comprobante de Pago - Guía de Instalación
 
 ## Descripción
 
@@ -41,7 +41,7 @@ Este módulo permite generar comprobantes de pago en formato PDF desde las factu
 
 4. Actualice la lista de aplicaciones:
    - Vaya a Aplicaciones → Actualizar lista de aplicaciones
-   - Busque "Payment Receipt Report"
+   - Busque "Comprobante de Pago"
    - Haga clic en "Instalar"
 
 ### Método 2: Usando Odoo CLI
