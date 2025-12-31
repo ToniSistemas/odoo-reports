@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_payment_receipt_a5">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <style>
+                            /* A5 Optimized Styles */
+                            .payment-receipt-header {
+                                text-align: center;
+                                margin-bottom: 20px;
+                                border-bottom: 2px solid #875a7b;
+                                padding-bottom: 10px;
+                            }
+                            .payment-receipt-title {
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: #875a7b;
+                                margin-bottom: 5px;
+                            }
+                            .payment-receipt-subtitle {
+                                font-size: 11px;
+                                color: #666;
+                            }
+                            .section-title {
+                                font-size: 13px;
+                                font-weight: bold;
+                                color: #875a7b;
+                                margin-top: 15px;
+                                margin-bottom: 8px;
+                                border-bottom: 1px solid #e0e0e0;
+                                padding-bottom: 3px;
+                            }
+                            .info-table {
+                                width: 100%;
+                                margin-bottom: 15px;
+                                font-size: 10px;
+                            }
+                            .info-table td {
+                                padding: 4px 0;
+                                vertical-align: top;
+                            }
+                            .info-label {
+                                font-weight: bold;
+                                width: 120px;
+                                color: #555;
+                            }
+                            .info-value {
+                                color: #333;
+                            }
+                            .amount-box {
+                                background-color: #f5f5f5;
+                                border: 2px solid #875a7b;
+                                padding: 15px;
+                                text-align: center;
+                                margin: 20px 0;
+                                border-radius: 5px;
+                            }
+                            .amount-label {
+                                font-size: 11px;
+                                color: #666;
+                                margin-bottom: 8px;
+                            }
+                            .amount-value {
+                                font-size: 22px;
+                                font-weight: bold;
+                                color: #875a7b;
+                            }
+                            .footer-text {
+                                text-align: center;
+                                margin-top: 25px;
+                                font-style: italic;
+                                color: #888;
+                                font-size: 9px;
+                            }
+                            .paid-badge {
+                                text-align: center;
+                                margin: 15px 0;
+                            }
+                            .paid-badge span {
+                                background-color: #d4edda;
+                                color: #155724;
+                                padding: 8px 15px;
+                                border-radius: 5px;
+                                font-weight: bold;
+                                font-size: 11px;
+                            }
+                            .observations-box {
+                                margin-top: 20px;
+                            }
+                            .observations-content {
+                                padding: 8px;
+                                background-color: #f9f9f9;
+                                border-left: 3px solid #875a7b;
+                                font-size: 10px;
+                            }
+                        </style>
+
+                        <!-- Header -->
+                        <div class="payment-receipt-header">
+                            <div class="payment-receipt-title">COMPROBANTE DE PAGO</div>
+                            <div class="payment-receipt-subtitle">Este documento sirve como comprobante de pago</div>
+                        </div>
+
+                        <!-- Customer Information -->
+                        <div class="section-title">Información del Cliente</div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="info-label">Nombre/Razón Social:</td>
+                                <td class="info-value">
+                                    <span t-field="o.partner_id.name"/>
+                                </td>
+                            </tr>
+                            <tr t-if="o.partner_id.street">
+                                <td class="info-label">Dirección:</td>
+                                <td class="info-value">
+                                    <div t-field="o.partner_id" 
+                                         t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}'/>
+                                </td>
+                            </tr>
+                            <tr t-if="o.partner_id.city">
+                                <td class="info-label">Localidad:</td>
+                                <td class="info-value">
+                                    <span t-field="o.partner_id.city"/>
+                                    <span t-if="o.partner_id.state_id"> - <span t-field="o.partner_id.state_id.name"/></span>
+                                </td>
+                            </tr>
+                            <tr t-if="o.partner_id.vat">
+                                <td class="info-label">ID Fiscal:</td>
+                                <td class="info-value">
+                                    <span t-field="o.partner_id.vat"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Invoice Information -->
+                        <div class="section-title">Información de la Factura</div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="info-label">Número de Factura:</td>
+                                <td class="info-value">
+                                    <span t-field="o.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">Fecha de Emisión:</td>
+                                <td class="info-value">
+                                    <span t-field="o.invoice_date" t-options='{"widget": "date"}'/>
+                                </td>
+                            </tr>
+                            <tr t-if="o.invoice_date_due">
+                                <td class="info-label">Fecha de Vencimiento:</td>
+                                <td class="info-value">
+                                    <span t-field="o.invoice_date_due" t-options='{"widget": "date"}'/>
+                                </td>
+                            </tr>
+                            <tr t-if="o.invoice_origin">
+                                <td class="info-label">Referencia:</td>
+                                <td class="info-value">
+                                    <span t-field="o.invoice_origin"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Amount Box -->
+                        <div class="amount-box">
+                            <div class="amount-label">IMPORTE TOTAL</div>
+                            <div class="amount-value">
+                                <span t-field="o.amount_total" 
+                                      t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                            </div>
+                        </div>
+
+                        <!-- Payment Status (Optional) -->
+                        <div t-if="o.payment_state in ['paid', 'in_payment']" class="paid-badge">
+                            <span>✓ PAGADO</span>
+                        </div>
+
+                        <!-- Additional Details -->
+                        <div t-if="o.narration" class="observations-box">
+                            <div class="section-title">Observaciones</div>
+                            <div class="observations-content">
+                                <span t-field="o.narration"/>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="footer-text">
+                            <p>Este comprobante ha sido generado electrónicamente</p>
+                            <p t-if="o.company_id.name">
+                                <span t-field="o.company_id.name"/> - 
+                                <span t-if="o.company_id.vat" t-field="o.company_id.vat"/>
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
