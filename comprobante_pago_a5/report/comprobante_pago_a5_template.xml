@@ -43,8 +43,9 @@
                             }
                             .info-label {
                                 font-weight: bold;
-                                width: 120px;
+                                width: 160px;
                                 color: #555;
+                                white-space: nowrap;
                             }
                             .info-value {
                                 color: #333;
