@@ -6,39 +6,48 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <style>
+                            /* A5 Single Page Optimization */
+                            @page {
+                                size: A5 portrait;
+                                margin: 0;
+                            }
+                            .page {
+                                page-break-after: avoid;
+                                page-break-inside: avoid;
+                            }
                             /* A5 Optimized Styles */
                             .payment-receipt-header {
                                 text-align: center;
-                                margin-bottom: 20px;
+                                margin-bottom: 8px;
                                 border-bottom: 2px solid #875a7b;
-                                padding-bottom: 10px;
+                                padding-bottom: 5px;
                             }
                             .payment-receipt-title {
-                                font-size: 20px;
+                                font-size: 18px;
                                 font-weight: bold;
                                 color: #875a7b;
-                                margin-bottom: 5px;
+                                margin-bottom: 3px;
                             }
                             .payment-receipt-subtitle {
-                                font-size: 13px;
+                                font-size: 10px;
                                 color: #666;
                             }
                             .section-title {
-                                font-size: 16px;
+                                font-size: 14px;
                                 font-weight: bold;
                                 color: #875a7b;
-                                margin-top: 15px;
-                                margin-bottom: 8px;
+                                margin-top: 8px;
+                                margin-bottom: 4px;
                                 border-bottom: 1px solid #e0e0e0;
-                                padding-bottom: 3px;
+                                padding-bottom: 2px;
                             }
                             .info-table {
                                 width: 100%;
-                                margin-bottom: 15px;
-                                font-size: 16px;
+                                margin-bottom: 8px;
+                                font-size: 11px;
                             }
                             .info-table td {
-                                padding: 4px 0;
+                                padding: 2px 0;
                                 vertical-align: top;
                             }
                             .info-label {
@@ -52,48 +61,48 @@
                             .amount-box {
                                 background-color: #f5f5f5;
                                 border: 2px solid #875a7b;
-                                padding: 15px;
+                                padding: 8px;
                                 text-align: center;
-                                margin: 20px 0;
+                                margin: 10px 0;
                                 border-radius: 5px;
                             }
                             .amount-label {
-                                font-size: 13px;
+                                font-size: 11px;
                                 color: #666;
-                                margin-bottom: 8px;
+                                margin-bottom: 4px;
                             }
                             .amount-value {
-                                font-size: 22px;
+                                font-size: 20px;
                                 font-weight: bold;
                                 color: #875a7b;
                             }
                             .footer-text {
                                 text-align: center;
-                                margin-top: 25px;
+                                margin-top: 10px;
                                 font-style: italic;
                                 color: #888;
-                                font-size: 9px;
+                                font-size: 8px;
                             }
                             .paid-badge {
                                 text-align: center;
-                                margin: 15px 0;
+                                margin: 8px 0;
                             }
                             .paid-badge span {
                                 background-color: #d4edda;
                                 color: #155724;
-                                padding: 8px 15px;
+                                padding: 5px 10px;
                                 border-radius: 5px;
                                 font-weight: bold;
-                                font-size: 13px;
+                                font-size: 11px;
                             }
                             .observations-box {
-                                margin-top: 20px;
+                                margin-top: 8px;
                             }
                             .observations-content {
-                                padding: 8px;
+                                padding: 5px;
                                 background-color: #f9f9f9;
                                 border-left: 3px solid #875a7b;
-                                font-size: 12px;
+                                font-size: 10px;
                             }
                         </style>
 
